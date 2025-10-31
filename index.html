@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Braga | BIM Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Ricardo Braga</h1>
+            <h2>BIM Developer</h2>
+            <div class="skills-list">
+                <span><i class="fas fa-check-circle"></i> Revit Avançado</span>
+                <span><i class="fas fa-check-circle"></i> Criação de Famílias</span>
+                <span><i class="fas fa-check-circle"></i> Desenvolvimento em .NET e C#</span>
+            </div>
+            <div class="social-links">
+                <a href="URL_SEU_LINKEDIN" target="_blank" class="social-btn linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="URL_SEU_GITHUB" target="_blank" class="social-btn github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="portfolio" class="projects">
+        <div class="container">
+            <h3 class="section-title">Soluções de Automação e Famílias Avançadas</h3>
+
+            <div class="project-card">
+                <div class="project-details">
+                    <h4>Plugin: Geração e Auditoria de Redes de Drenagem</h4>
+                    <p class="problem"><strong>Problema Resolvido:</strong> O cálculo e a alteração manual de declividades/direções da rede eram demorados, propensos a erros e sem registro confiável.</p>
+                    <p class="solution"><strong>A Solução (Plugin C# / Revit API):</strong> Interface de configuração (*placeholder para imagem da Janela*) que permite definir a direção das caixas da rede. O plugin calcula, gera o registro e mantém o cálculo salvo no documento para validação e alterações rápidas.</p>
+                    <p class="metrics">**<i class="fas fa-rocket"></i> Resultado:** Redução de **X%** no tempo de alteração e **100%** de garantia e rastreabilidade no registro de cálculo.</p>
+                    <p class="tech-used">**Tecnologias:** C#, Revit API, UI/UX (Interface Gráfica).</p>
+                    <a href="URL_REPO_DRENAGEM_GITHUB" target="_blank" class="repo-link"><i class="fas fa-code"></i> Ver Código (ou Mais Detalhes)</a>
+                </div>
+                <div class="project-media media-placeholder">
+                    [PLACEHOLDER: GIF/IMAGEM DA INTERFACE/JANELA DO PLUGIN]
+                </div>
+            </div>
+
+            <div class="project-card reverse">
+                <div class="project-details">
+                    <h4>Plugin: Distribuidor de Famílias da Biblioteca da Empresa</h4>
+                    <p class="problem"><strong>Problema Resolvido:</strong> Inconsistência na biblioteca e lentidão na distribuição e atualização das Famílias padrão da empresa para os projetistas.</p>
+                    <p class="solution"><strong>A Solução (Plugin C# / Revit API / Web):</strong> Interface acoplada (*Dockable Pane - placeholder para imagem*) dentro do Revit, onde os projetistas fazem o download das Famílias em tempo real. O setor responsável pode atualizar a biblioteca sem intervenção dos usuários.</p>
+                    <p class="metrics">**<i class="fas fa-bolt"></i> Resultado:** Aumento de **X%** na padronização dos projetos e acesso instantâneo e atualizado às Famílias.</p>
+                    <p class="tech-used">**Tecnologias:** C#, Revit API (Dockable Pane), Conexão Web/Serviço.</p>
+                    <a href="URL_REPO_ARQUITETURA_GITHUB" target="_blank" class="repo-link"><i class="fas fa-code"></i> Ver Código (ou Mais Detalhes)</a>
+                </div>
+                <div class="project-media media-placeholder">
+                    [PLACEHOLDER: GIF/IMAGEM DA INTERFACE/DOCKABLE PANE]
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-details">
+                    <h4>Família Avançada: Canaleta Parametrizada (Linear e Curva)</h4>
+                    <p class="problem"><strong>Problema Resolvido:</strong> Famílias convencionais não lidam bem com curvas, inclinações e variações complexas de altura, exigindo modelagem manual ineficiente.</p>
+                    <p class="solution"><strong>A Solução (Família Adaptativa):</strong> Família que permite inclinação parametrizada, ajuste de comprimento, altura inicial e final e curvatura, tudo via parâmetros de instância.</p>
+                    <p class="metrics">**<i class="fas fa-drafting-compass"></i> Resultado:** Modelagem de sistemas de drenagem complexos **X vezes** mais rápida e com precisão geométrica garantida.</p>
+                    <p class="tech-used">**Tecnologias:** Revit Famílias Avançadas, Fórmulas de Geometria.</p>
+                    <div class="image-gallery">
+                        <div class="media-placeholder">[PLACEHOLDER: IMAGEM GRANDE DA FAMÍLIA LINEAR/INCLINADA]</div>
+                        <div class="media-placeholder">[PLACEHOLDER: IMAGEM GRANDE DA FAMÍLIA CURVA]</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reverse">
+                <div class="project-details">
+                    <h4>Família com Automação: Poço de Visita com Cálculos Internos</h4>
+                    <p class="problem"><strong>Problema Resolvido:</strong> O cálculo de dimensionamento e necessidade do poço era feito externamente no Excel, resultando em descoordenação e risco de erro.</p>
+                    <p class="solution"><strong>A Solução (Família Parametrizada):</strong> Família adaptada onde todo o cálculo de necessidade e dimensionamento é feito internamente. Basta o usuário inserir os dados necessários para a Família validar e ajustar as dimensões.</p>
+                    <p class="metrics">**<i class="fas fa-calculator"></i> Resultado:** Eliminação de **100%** do retrabalho de dimensionamento em planilha, com validação instantânea no modelo.</p>
+                    <p class="tech-used">**Tecnologias:** Revit Famílias (Adaptativa), Fórmulas e Lógicas Avançadas.</p>
+                    <div class="media-placeholder">[PLACEHOLDER: IMAGEM DA INTERFACE DE PARÂMETROS E CÁLCULOS]</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ricardo Braga | BIM Developer</p>
+            <p>Entre em Contato para Automação Personalizada.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

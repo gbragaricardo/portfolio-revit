@@ -1,0 +1,238 @@
+/* Configurações Globais */
+:root {
+    --primary-color: #002D62; /* Azul Marinho Forte */
+    --accent-color: #FF7F00; /* Laranja de Destaque */
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --dark-text: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* --- ESTILO DO CABEÇALHO (HERO) --- */
+.hero {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 80px 0 60px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.skills-list span {
+    display: inline-block;
+    background: #1a4d8c; /* Um tom mais claro de azul */
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.skills-list i {
+    color: #4CAF50; /* Verde para sucesso */
+    margin-right: 5px;
+}
+
+/* Links Sociais */
+.social-links {
+    margin-top: 25px;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.linkedin {
+    background-color: #0077B5;
+    color: white;
+}
+
+.github {
+    background-color: #333;
+    color: white;
+}
+
+.linkedin:hover { background-color: #005582; }
+.github:hover { background-color: #555; }
+
+
+/* --- ESTILO DA SEÇÃO DE PROJETOS --- */
+.projects {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--light-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:nth-child(even) {
+    background-color: #E8E8E8; /* Fundo levemente diferente para par/ímpar */
+}
+
+.project-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-details, .project-media {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.project-card h4 {
+    font-size: 1.8em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.problem {
+    color: var(--dark-text);
+    margin-bottom: 10px;
+}
+
+.solution {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.metrics {
+    font-weight: bold;
+    color: #4CAF50; /* Verde para destacar resultados */
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.metrics i {
+    margin-right: 5px;
+}
+
+.tech-used {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Mídia e Placeholders */
+.media-placeholder {
+    background-color: #ccc;
+    color: var(--dark-text);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 0.9em;
+    overflow: hidden; /* Garante que GIFs e Imagens se ajustem */
+}
+
+.project-media img, .project-media video, .project-media iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Galeria de Imagens para Canaleta */
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.image-gallery .media-placeholder {
+    flex: 1;
+    min-height: 200px;
+}
+
+/* Link de Repositório */
+.repo-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.repo-link:hover {
+    background-color: #1a4d8c;
+}
+
+/* --- ESTILO DO RODAPÉ --- */
+footer {
+    background-color: var(--dark-text);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 800px) {
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-card.reverse {
+        flex-direction: column; /* Desfaz o reverse no mobile */
+    }
+
+    .project-details, .project-media {
+        padding: 10px 0;
+    }
+    
+    .project-media {
+        margin-top: 20px;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+}
