@@ -1,10 +1,11 @@
 /* Configurações Globais */
 :root {
-    --primary-color: #002D62; /* Azul Marinho Forte */
-    --accent-color: #FF7F00; /* Laranja de Destaque */
-    --text-color: #333;
-    --light-bg: #f4f4f4;
-    --dark-text: #1a1a1a;
+    --primary-color: #9B59B6; /* Roxo C# para Destaque */
+    --secondary-color: #1A1A1A; /* Fundo Escuro Principal */
+    --card-bg: #212121; /* Fundo do Card um pouco mais claro */
+    --text-color: #E0E0E0; /* Texto Claro */
+    --light-text: #BDBDBD; /* Texto Secundário Mais Claro */
+    --success-color: #00B894; /* Verde para sucesso/métricas */
 }
 
 * {
@@ -17,7 +18,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
-    background-color: white;
+    background-color: var(--secondary-color); /* Fundo Escuro */
 }
 
 .container {
@@ -29,7 +30,7 @@ body {
 
 /* --- ESTILO DO CABEÇALHO (HERO) --- */
 .hero {
-    background-color: var(--primary-color);
+    background-color: #121212; /* Fundo do Header bem escuro */
     color: white;
     padding: 80px 0 60px;
     text-align: center;
@@ -42,13 +43,13 @@ body {
 
 .hero h2 {
     font-size: 1.5em;
-    color: var(--accent-color);
+    color: var(--primary-color); /* Roxo */
     margin-bottom: 20px;
 }
 
 .skills-list span {
     display: inline-block;
-    background: #1a4d8c; /* Um tom mais claro de azul */
+    background: #333; 
     padding: 5px 15px;
     margin: 5px;
     border-radius: 20px;
@@ -56,7 +57,7 @@ body {
 }
 
 .skills-list i {
-    color: #4CAF50; /* Verde para sucesso */
+    color: var(--success-color); 
     margin-right: 5px;
 }
 
@@ -73,32 +74,23 @@ body {
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s;
-}
-
-.linkedin {
-    background-color: #0077B5;
+    background-color: var(--primary-color); /* Roxo */
     color: white;
 }
 
-.github {
-    background-color: #333;
-    color: white;
-}
-
-.linkedin:hover { background-color: #005582; }
-.github:hover { background-color: #555; }
+.social-btn:hover { background-color: #A96BC0; } /* Roxo mais claro ao passar o mouse */
 
 
 /* --- ESTILO DA SEÇÃO DE PROJETOS --- */
 .projects {
     padding: 50px 0;
-    background-color: white;
+    background-color: var(--secondary-color);
 }
 
 .section-title {
     text-align: center;
     font-size: 2em;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Roxo */
     margin-bottom: 40px;
 }
 
@@ -109,12 +101,12 @@ body {
     margin-bottom: 60px;
     padding: 30px;
     border-radius: 10px;
-    background-color: var(--light-bg);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-bg); /* Fundo do Card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
 }
 
 .project-card:nth-child(even) {
-    background-color: #E8E8E8; /* Fundo levemente diferente para par/ímpar */
+    background-color: #272727; /* Fundo levemente diferente para par/ímpar */
 }
 
 .project-card.reverse {
@@ -128,23 +120,24 @@ body {
 
 .project-card h4 {
     font-size: 1.8em;
-    color: var(--accent-color);
+    color: var(--primary-color); /* Roxo */
     margin-bottom: 15px;
 }
 
 .problem {
-    color: var(--dark-text);
+    color: var(--light-text);
     margin-bottom: 10px;
 }
 
 .solution {
     font-style: italic;
     margin-bottom: 15px;
+    color: var(--text-color);
 }
 
 .metrics {
     font-weight: bold;
-    color: #4CAF50; /* Verde para destacar resultados */
+    color: var(--success-color); /* Verde para destacar resultados */
     font-size: 1.1em;
     margin-bottom: 15px;
 }
@@ -155,14 +148,14 @@ body {
 
 .tech-used {
     font-size: 0.9em;
-    color: #666;
+    color: var(--light-text);
     margin-bottom: 20px;
 }
 
 /* Mídia e Placeholders */
 .media-placeholder {
-    background-color: #ccc;
-    color: var(--dark-text);
+    background-color: #333;
+    color: var(--light-text);
     min-height: 250px;
     display: flex;
     align-items: center;
@@ -170,7 +163,7 @@ body {
     text-align: center;
     border-radius: 5px;
     font-size: 0.9em;
-    overflow: hidden; /* Garante que GIFs e Imagens se ajustem */
+    overflow: hidden; 
 }
 
 .project-media img, .project-media video, .project-media iframe {
@@ -203,13 +196,13 @@ body {
 }
 
 .repo-link:hover {
-    background-color: #1a4d8c;
+    background-color: #A96BC0; /* Roxo mais claro ao passar o mouse */
 }
 
 /* --- ESTILO DO RODAPÉ --- */
 footer {
-    background-color: var(--dark-text);
-    color: white;
+    background-color: #121212;
+    color: var(--light-text);
     text-align: center;
     padding: 20px 0;
 }
@@ -221,7 +214,7 @@ footer {
     }
 
     .project-card.reverse {
-        flex-direction: column; /* Desfaz o reverse no mobile */
+        flex-direction: column; 
     }
 
     .project-details, .project-media {
